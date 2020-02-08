@@ -1,15 +1,5 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-import altair as alt
-import pydeck as pdk
-from PIL import Image
-import os,glob
-from zipfile import ZipFile
-import matplotlib.pyplot as plt
-import seaborn as sns 
-import matplotlib
-import altair as alt
+
 matplotlib.use('Agg')# To Prevent Errors
 
 
