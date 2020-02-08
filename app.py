@@ -12,15 +12,7 @@ import matplotlib
 import altair as alt
 matplotlib.use('Agg')# To Prevent Errors
 
-from sklearn.datasets import  load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
-from sklearn.pipeline import Pipeline
-from sklearn.externals import joblib
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+
 
 code = '''iris_df=load_iris()
 
