@@ -13,15 +13,6 @@ import altair as alt
 matplotlib.use('Agg')# To Prevent Errors
 
 
-
-code = '''iris_df=load_iris()
-
-iris_df.data
-iris_df.target'''
-st.code(code,language='python')
-
-
-
 st.title('簡介與作品集')
 
 st.text('This is some text.')
