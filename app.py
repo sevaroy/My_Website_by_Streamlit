@@ -1,95 +1,30 @@
 import streamlit as st
 
-matplotlib.use('Agg')# To Prevent Errors
+#matplotlib.use('Agg')# To Prevent Errors
 
 
-st.title('簡介與作品集')
+st.title('streamlit on AWS EC2')
+st.markdown('Version **_1.0**')
 
-st.text('This is some text.')
+st.title('簡介')
 
-st.markdown('Streamlit is **_really_ cool**.')
+"""
+歷史，旅行，日劇，RPG，FF系列，Apex，PC組裝與改裝RGB，鋼彈模型
+，皇室戰爭，公主連結，獨立遊戲，鬼滅之刃，樂高，攝影，果粉，ikea。
 
-st.write('Hello, *World!* :sunglasses:')
-
-st.header('This is a header')
-
-code = '''def hello():
-    print("Hello,Streamlit!")'''
-st.code(code,language='python')
-
-chart_data = pd.DataFrame(
-	np.random.randn(20,3),
-	columns=['a','b','c'])
-
-st.line_chart(chart_data)
-st.area_chart(chart_data)
-
-
-chart_data = pd.DataFrame(
-	np.random.randn(50,3),
-	columns=['a','b','c'])
-st.bar_chart(chart_data)
-
-arr = np.random.normal(1,1,size=10000)
-plt.hist(arr,bins=20)
-
-st.pyplot()
-
-df1 = pd.DataFrame(
-	np.random.randn(200,3),
-	columns = ['a','b','c'])
-
-st.vega_lite_chart(df1,{
-	'mark': 'circle',
-	'encoding': {
-	 		'x': {'field': 'a', 'type': 'quantitative'},
-	 		'y': {'field': 'b', 'type': 'quantitative'},
-	 		'size': {'field': 'c', 'type': 'quantitative'},
-	  		'color': {'field': 'c', 'type': 'quantitative'},
-	   },
-})
-
-df2 = pd.DataFrame(
-	np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
-df2
-
-if st.button('Say Hello'):
-	st.write('why hello there')
-else:
-	st.write('Goodbye')
-
-
-genre = st.radio(
-	"write's your favorite movie genre",
-	('comedy','Drama','Documentary'))
-
-if genre =='comedy':
-	st.write('You selected Comedy.')
-else:
-	st.write("you didn't select comey")
-
-st.info('This is a purely informational message')
-st.warning('This is a warning')
-st.success('This is a success message!')
-
-
-df = pd.DataFrame(np.random.randn(200, 3), columns=["a", "b", "c"])
-
-c = alt.Chart(df).mark_circle().encode(x="a", y="b", size="c", color="c").interactive()
-
-st.title("These two should look exactly the same")
-
-st.write("Altair chart using `st.altair_chart`:")
-st.altair_chart(c)
-
-st.write("And the same chart using `st.write`:")
-st.write(c)
+非本科系轉職的工程師，目前正在學習把所學的項目都在一起做成產品。
+目前在加強Python網路爬蟲，做分析之前必須要有Data，Data is King.
+有了資料後如何做呈現，正在學習使用Streamlit&Django做前端部分，
+未來想要與Line做整合。
 
 
 
 """
-## 我的自傳
+
+st.title('我的自傳')
+
+"""
+
 
 (1) 成長背景
 
@@ -168,3 +103,87 @@ AWS Certified Machine Learning Specialty
 
 """
 
+st.title('example')
+
+
+code = '''def hello():
+    print("Hello,Streamlit!")'''
+st.code(code,language='python')
+
+chart_data = pd.DataFrame(
+	np.random.randn(20,3),
+	columns=['a','b','c'])
+
+st.line_chart(chart_data)
+st.area_chart(chart_data)
+
+
+chart_data = pd.DataFrame(
+	np.random.randn(50,3),
+	columns=['a','b','c'])
+st.bar_chart(chart_data)
+
+arr = np.random.normal(1,1,size=10000)
+plt.hist(arr,bins=20)
+
+st.pyplot()
+
+df1 = pd.DataFrame(
+	np.random.randn(200,3),
+	columns = ['a','b','c'])
+
+st.vega_lite_chart(df1,{
+	'mark': 'circle',
+	'encoding': {
+	 		'x': {'field': 'a', 'type': 'quantitative'},
+	 		'y': {'field': 'b', 'type': 'quantitative'},
+	 		'size': {'field': 'c', 'type': 'quantitative'},
+	  		'color': {'field': 'c', 'type': 'quantitative'},
+	   },
+})
+
+df2 = pd.DataFrame(
+	np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+df2
+
+if st.button('Say Hello'):
+	st.write('why hello there')
+else:
+	st.write('Goodbye')
+
+
+genre = st.radio(
+	"write's your favorite movie genre",
+	('comedy','Drama','Documentary'))
+
+if genre =='comedy':
+	st.write('You selected Comedy.')
+else:
+	st.write("you didn't select comey")
+
+st.info('This is a purely informational message')
+st.warning('This is a warning')
+st.success('This is a success message!')
+
+
+df = pd.DataFrame(np.random.randn(200, 3), columns=["a", "b", "c"])
+
+c = alt.Chart(df).mark_circle().encode(x="a", y="b", size="c", color="c").interactive()
+
+st.title("These two should look exactly the same")
+
+st.write("Altair chart using `st.altair_chart`:")
+st.altair_chart(c)
+
+st.write("And the same chart using `st.write`:")
+st.write(c)
+
+
+st.text('This is some text.')
+
+st.markdown('Streamlit is **_really_ cool**.')
+
+st.write('Hello, *World!* :sunglasses:')
+
+st.header('This is a header')
